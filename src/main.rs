@@ -1,11 +1,6 @@
-use std::{collections::{HashMap, HashSet}, f32::NEG_INFINITY};
-use ndarray::{arr2, Array2, SliceArg, Slice, s, Data, Axis, ArrayBase, Array1};
+use std::{collections::HashSet, f32::NEG_INFINITY};
+use ndarray::{arr2, Array2, s, Array1};
 use ndarray_stats::QuantileExt;
-#[link(name="foo", kind="static")]
-extern { 
-    // this is rustified prototype of the function from our C library
-    fn testcall(v: f32); 
-}
 
 struct Node<'a> {
     // For decision node
@@ -171,9 +166,4 @@ fn main() {
     ]);
 
     println!("{}", a.dot(&b.t()));
-
-    // calling the function from foo library
-    unsafe { 
-        testcall(3.14159); 
-    };
 }
