@@ -1,3 +1,5 @@
+<img src="https://github.com/gregyjames/RustDecisionTree/blob/e333fbb6d80451e785c57f1c6eff62caaa54417b/img/computer_brain.png" width="200px">
+
 # RustDecisionTree
 Decision Tree implemented in rust
 
